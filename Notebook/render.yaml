@@ -2,9 +2,10 @@ services:
   - type: web
     name: notebook-app
     env: docker
+    rootDir: ..           # parent folder of render.yaml (repo root)
     plan: free
     branch: main
-    dockerfilePath: Dockerfile
+    dockerfilePath: ../Dockerfile
     buildCommand: ""
     startCommand: ""
     envVars:
