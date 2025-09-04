@@ -4,7 +4,8 @@ WORKDIR /app
 
 # Copy POM and source
 COPY pom.xml .
-COPY notebook/src ./src
+RUN mvn dependency:go-offline
+COPY /src ./src
 
 # Build JAR
 RUN mvn clean package -DskipTests
