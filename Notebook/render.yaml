@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: notebook-app
+    env: docker
+    plan: free
+    branch: main
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
