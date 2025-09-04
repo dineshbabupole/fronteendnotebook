@@ -21,7 +21,7 @@ export default function NoteView() {
   };
 
   const handleShare = () => {
-    const shareUrl = `${window.location.origin}/view/${id}`;
+    const shareUrl = `$https://fronteendnotebook.vercel.app/view/${id}`;
     navigator.clipboard.writeText(shareUrl).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
